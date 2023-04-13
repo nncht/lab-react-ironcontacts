@@ -7,12 +7,40 @@ function App() {
     contacts[0],
     contacts[1],
     contacts[2],
-    contacts[2],
     contacts[3],
+    contacts[4],
   ]);
 
   console.log(contacts);
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <table>
+        <thead>
+          <tr>
+            <th>Picture</th>
+            <th>Name</th>
+            <th>Popularity</th>
+          </tr>
+        </thead>
+
+        {ironContacts.map((contact) => (
+          <tbody>
+            <tr>
+              <td>
+                <img
+                  src={contact.pictureUrl}
+                  alt={contact.name}
+                  width="100px"
+                />
+              </td>
+              <td>{contact.name}</td>
+              <td>{contact.popularity}</td>
+            </tr>
+          </tbody>
+        ))}
+      </table>
+    </div>
+  );
 }
 export default App;
