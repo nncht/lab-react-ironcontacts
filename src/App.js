@@ -15,35 +15,39 @@ function App() {
 
   return (
     <div className="App">
-      <table>
-        <thead>
-          <tr>
-            <th>Picture</th>
-            <th>Name</th>
-            <th>Popularity</th>
-            <th>Won Oscar</th>
-            <th>Won Emmy</th>
-          </tr>
-        </thead>
-
-        {ironContacts.map((contact) => (
-          <tbody>
+      <h1>IronContacts</h1>
+      <button>Add Random Contact</button>
+      <center>
+        <table width="600px">
+          <thead>
             <tr>
-              <td>
-                <img
-                  src={contact.pictureUrl}
-                  alt={contact.name}
-                  width="100px"
-                />
-              </td>
-              <td>{contact.name}</td>
-              <td>{contact.popularity}</td>
-              <td>{contact.wonOscar ? "🏆" : ""}</td>
-              <td>{contact.wonEmmy ? "🏆" : ""}</td>
+              <th>Picture</th>
+              <th>Name</th>
+              <th>Popularity</th>
+              <th>Won Oscar</th>
+              <th>Won Emmy</th>
             </tr>
-          </tbody>
-        ))}
-      </table>
+          </thead>
+
+          {ironContacts.map((contact) => (
+            <tbody>
+              <tr>
+                <td>
+                  <img
+                    src={contact.pictureUrl}
+                    alt={contact.name}
+                    width="100px"
+                  />
+                </td>
+                <td>{contact.name}</td>
+                <td>{contact.popularity}</td>
+                <td>{contact.wonOscar ? "🏆" : ""}</td>
+                <td>{contact.wonEmmy ? "🏆" : ""}</td>
+              </tr>
+            </tbody>
+          ))}
+        </table>
+      </center>
     </div>
   );
 }
