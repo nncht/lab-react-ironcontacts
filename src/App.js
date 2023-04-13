@@ -4,11 +4,11 @@ import { useState } from "react";
 
 function App() {
   const [ironContacts, setContacts] = useState([
-    contacts[0],
-    contacts[1],
-    contacts[2],
-    contacts[3],
-    contacts[4],
+    contacts[5],
+    contacts[6],
+    contacts[7],
+    contacts[8],
+    contacts[9],
   ]);
 
   console.log(contacts);
@@ -38,8 +38,8 @@ function App() {
               </td>
               <td>{contact.name}</td>
               <td>{contact.popularity}</td>
-              <td>x</td>
-              <td>y</td>
+              <td>{contact.wonOscar ? "🏆" : ""}</td>
+              <td>{contact.wonEmmy ? "🏆" : ""}</td>
             </tr>
           </tbody>
         ))}
